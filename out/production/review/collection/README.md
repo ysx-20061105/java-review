@@ -29,11 +29,25 @@
 8. toArray() 转成数组
 9. iterator() 返回迭代器对象，用于遍历集合
 
+测试使用：[Collection](./CollectionTest.java)
 
 #### List
-用于存储有序的、可重复的数据
+用于存储有序的、可重复的数据,集合中每个元素都有其对应的顺序索引  “动态”数组
 
 实现类：ArrayList、LinkedList、Vector
+
+ArrayList、LinkedList、Vector三者的异同？
+
+相同点：三个类都实现了List接口，存储数据的特点相同：存储有序的、可重复的数据
+
+不同点：
+1. ArrayList：作为List接口的主要实现类；线程不安全，效率高；底层使用Object[] elementData存储
+2. Vector：作为List接口的古老实现类；线程安全的，效率低；底层使用Object[] elementData存储
+3. LinkedList：底层使用双向链表存储；对于频繁的插入、删除操作，使用LinkedList比ArrayList效率高
+
+源码分析
+
+[ArrayList探索](./ArrayListTest.java)
 
 #### Set
 用于存储无序的、不可重复的数据
