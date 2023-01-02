@@ -348,7 +348,7 @@ wakeup()方法 ：通过调用 Selector 对象的 wakeup（）方法让处在阻
 
 close()方法 ：通过 close（）方法关闭 Selector， 该方法使得任何一个在选择操作中阻塞的线程都被唤醒（类似 wakeup（）），同时 使得注册到该 Selector 的所有 Channel 被注销，所有的键将被取消，但是 Channel 本身并不会关闭。
 
-####操作
+#### 操作
 [SelectorDemo01](./selector/SelectorDemo01.java)
 
 [SelectorDemo02](./selector/SelectorDemo02.java)
