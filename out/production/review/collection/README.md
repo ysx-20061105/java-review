@@ -54,10 +54,33 @@ ArrayList、LinkedList、Vector三者的异同？
 
 实现类：HashSet、LinkedHashSet、TreeSet
 
+Set集合不允许包含相同的元素，如果试把两个相同的元素加入同一个Set集合中，则添加操作失败
+
+Set判断两个对象是否相同不是使用==运算符，而是根据equals()方法
+
+HashSet：
+1. HashSet时Set接口的经典实现
+2. HashSet按Hash算法来存储集合中的元素，具有很好的存取、查找、删除性能
+3. HashSet的特点：
+   1. 不能保证元素的排列顺序
+   2. HashSet不是线程安全的
+   3. 集合元素可以是null
+4. 对于存放Set容器的对象，对应的类一定要重写equals()和hashCode()方法，以实现对象相等规则
+
+TreeSet：
+1. TreeSet是SortedSet接口的实现类，TreeSet可以确保集合元素处于排序状态
+2. TreeSet底层使用红黑树结构存储数据
+3. TreeSet两种排序方法：自然排序和定制排序。默认使用自然排序
+   1. 自然排序中，比较两个对象是否相同的标准为：compareTo()返回0.而不是equals()
+   2. 定制排序，是使用Comparator类重写compare()方法
+    
+
 ### Map
 用于存储一对(key,value)的数据
 
 实现类：HashMap、LinkedHashMap、TreeMap、Hashtable、Properties
+
+
 
 
 
